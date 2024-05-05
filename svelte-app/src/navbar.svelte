@@ -1,7 +1,8 @@
 <script>
-    import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
-    import { Link } from 'svelte-routing';
+	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	import { Link } from 'svelte-routing';
 </script>
+
 
 <Navbar>
     <NavBrand href="/">
@@ -14,7 +15,3 @@
       <NavLi><Link to="/coverletter">자기소개서</Link></NavLi>
     </NavUl>
 </Navbar>
-
-<div class="px-2 sm:px-4"><div class="container mx-auto">
-<slot></slot>
-</div></div>

@@ -1,5 +1,5 @@
 <script>
-    let data = "hello world"
+    let data = "Calender"
 </script>
 
 <b>{data}</b>
