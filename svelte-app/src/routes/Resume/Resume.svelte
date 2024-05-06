@@ -83,7 +83,7 @@
     <div class = 'basicinfo'>
         <button on:click={toggleEdit}>{isEditing ? '📥 저장' : '🔧 수정'}</button>
         <div class='header'>
-            <h2>기본 정보</h2>
+            <h2>👩 기본 정보</h2>
         </div>
         <div>
             <label>이름:</label>
@@ -101,7 +101,7 @@
       
     <div class = 'intro'>
         <div class='header'>
-            <h2>자기 소개</h2>
+            <h2>📢 간단 소개</h2>
         </div>
         <div>
             <textarea class="inputField" class:noBorder={!isEditing} disabled={!isEditing} />
@@ -110,8 +110,8 @@
 
     <div class='careers'>
         <div class = 'carrerheader'>
-            <h2>경력</h2>
-            <button on:click={addCareer}>경력 추가하기</button>
+            <h2>💼 경력</h2>
+            <button on:click={addCareer}>+ 경력 추가</button>
         </div>
         {#each careers as career, index}
         <div class="career-input">
@@ -186,7 +186,7 @@
 
 
     <div class='education'>
-        <h2>학력</h2>
+        <h2>🎓 학력</h2>
         {#each educationHistory as education, index}
             <div class="education-input">
                 {#if education.isEditable}
@@ -209,11 +209,11 @@
                 {/if}
             </div>
         {/each}
-        <button on:click={addEducation}>학력 추가</button>
+        <button on:click={addEducation}>+ 학력 추가</button>
     </div>
     
     <div class = 'links'>
-        <h2>링크</h2>
+        <h2>🔗 링크</h2>
         {#each links as link, index}
             <div class = 'link-input'>
                 {#if link.isEditable}
@@ -228,7 +228,7 @@
                 {/if}
             </div>
         {/each}
-        <button on:click={addLink}>링크 추가</button>
+        <button on:click={addLink}>+ 링크 추가</button>
     </div>
 
 </div>
@@ -351,6 +351,15 @@
         border: 1px solid #ccc;
         padding: 10px;
         background-color: rgb(236, 249, 255);
+    }
+    .careers .career-input button {
+        padding: 3px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: rgb(236, 249, 255);
+        font-size: 10px;
+        cursor: pointer;
+        margin-left: 10px;
     }
     .education {
         width: 100%;
