@@ -54,6 +54,21 @@
         educationHistory = [...educationHistory]; // Svelte가 배열의 변화를 감지하도록 새로운 배열 할당
     }
 
+    let links = [];
+
+    // 링크와 설명을 links 배열에 추가
+    function addLink() {
+        links = [...links, { url: '', description: '', isEditable: true }];
+    }
+    function editLink(index) {
+        links[index].isEditable = true;
+        links = [...links]; // Svelte가 배열의 변화를 감지하도록 새로운 배열 할당
+    }
+    function saveLink(index) {
+        links[index].isEditable = false;
+        links = [...links]; // Svelte가 배열의 변화를 감지하도록 새로운 배열 할당
+    }
+
   </script>
   
 
@@ -197,14 +212,26 @@
         <button on:click={addEducation}>학력 추가</button>
     </div>
     
-
-
-
-
+    <div class = 'links'>
+        <h2>링크</h2>
+        {#each links as link, index}
+            <div class = 'link-input'>
+                {#if link.isEditable}
+                    <input type="text" placeholder="링크" bind:value={link.url} />
+                    <input type="text" placeholder="설명" bind:value={link.description} />
+                    <button on:click={() => saveLink(index)}>저장</button>
+                {:else}
+                    <div>
+                        <a href={link.url} target="_blank">{link.description} | {link.url}</a>
+                        <button on:click={() => editLink(index)}>수정</button>
+                    </div>
+                {/if}
+            </div>
+        {/each}
+        <button on:click={addLink}>링크 추가</button>
+    </div>
 
 </div>
-
-
 
   
   
@@ -226,6 +253,7 @@
         align-items: center;
         margin-top : 70px;
         margin-bottom: 100px;
+        border-bottom : 0.5px solid gray;
     }
   
     h1 {
@@ -304,19 +332,16 @@
         width: 100%;
         margin-bottom: 100px;
     }
-    .careers .carrerheader {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+    
     .careers .carrerheader button{
+        margin-top : 10px;
         padding : 5px 10px;
         border : 1px solid black;
         border-radius : 5px;
         background-color: rgb(236, 249, 255);
         font-size: 15px;
         cursor: pointer;
-        margin-left : 10px;
+        margin-bottom : 20px;
     }
     
     .careers .career-input {
@@ -342,6 +367,29 @@
     }
 
     .education button {
+        margin-top : 10px;
+        padding: 5px 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: rgb(236, 249, 255);
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .links {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .links .link-input button {
+        padding: 3px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: rgb(236, 249, 255);
+        font-size: 10px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    .links button {
         margin-top : 10px;
         padding: 5px 10px;
         border: 1px solid black;
