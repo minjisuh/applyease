@@ -35,7 +35,11 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'public/build/bundle.js'
+		file: 'public/build/bundle.js',
+		globals: {
+			'svelte-routing': 'svelteRouting',
+			'flowbite-svelte': 'flowbiteSvelte',
+		},
 	},
 	plugins: [
 		svelte({
@@ -56,7 +60,6 @@ export default {
 		resolve({
 			browser: true,
 			dedupe: ['svelte'],
-			exportConditions: ['svelte']
 		}),
 		commonjs(),
 
