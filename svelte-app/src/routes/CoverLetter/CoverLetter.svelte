@@ -7,11 +7,6 @@
         "4. 협업 경험",
         "5. 성격 장단점"
     ];
-    function copyAnswer(answer) {
-        navigator.clipboard.writeText(answer).then(() => {
-        alert("답변이 복사되었습니다!");
-        });
-    }
     // 답변을 텍스트 파일로 저장
     function saveAnswers() {
         let content = "";
@@ -42,7 +37,6 @@
             <div>
                 <h2>{question}</h2>
                 <textarea bind:value={answers[index]} placeholder="여기에 답변을 입력하세요."></textarea>
-                <button on:click={() => copyAnswer(answers[index])}>답변 복사</button>
                 <p>글자수: {answers[index].length}</p>
             </div>
         {/each}
