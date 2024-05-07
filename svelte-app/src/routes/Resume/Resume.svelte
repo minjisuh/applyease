@@ -74,7 +74,7 @@
 
 <div class="container">
     <header class="page-header">
-      <h1>🎈이력서</h1> 
+      <h1>📜 이력서</h1> 
       <button on:click={saveFile}>📂 파일로 저장</button> 
     </header>
 
@@ -83,7 +83,7 @@
     <div class = 'basicinfo'>
         <button on:click={toggleEdit}>{isEditing ? '📥 저장' : '🔧 수정'}</button>
         <div class='header'>
-            <h2>👩 기본 정보</h2>
+            <h2>🪪 기본 정보</h2>
         </div>
         <div>
             <label>이름:</label>
