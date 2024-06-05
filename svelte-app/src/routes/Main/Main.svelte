@@ -5,6 +5,7 @@
 <div class = 'container'>
     <header class="page-header">
         <h1>📆 채용 일정</h1>
+
 </div>
 
 <style>
@@ -23,7 +24,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top : 70px;
         margin-bottom: 100px;
         border-bottom : 0.5px solid gray;
     }

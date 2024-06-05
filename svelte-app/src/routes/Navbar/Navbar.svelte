@@ -21,6 +21,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+    .navbar-container img {
+    width: 50px;
+    }
+
     .page-name {
     font-size: 24px;
     font-weight: bold;
@@ -53,6 +57,7 @@
     background-color: #9ed8f1;
     color: #fff; /* 호버 시 텍스트 색상 변경 */
 
+
     
 }
 
@@ -60,6 +65,7 @@
   
   <div class="container">
     <div class="navbar-container">
+      <img src="/images/logo.svg" alt="Flowbite Logo" />
       <div class="page-name">Apply Ease</div>
       <nav>
         <a href="#/">Home</a>
@@ -69,7 +75,7 @@
     </div>
  
     <div>
-        <img src="/public/space.gif" alt="Your GIF" />
+        <img src="/images/space.gif" alt="Your GIF" />
       </div>
       
   </div>
