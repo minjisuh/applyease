@@ -16,20 +16,26 @@
     width: 100%;
     max-width: 800px;
     padding: 10px 0;
-    background-color: #e1f6ff;
+    background-color: #ffffff;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height : 30px;
     }
 
     .navbar-container img {
     width: 50px;
     }
 
+    .container .content img {
+      margin-top : 10px;
+      margin-bottom : 10px;
+      width: 800px;
+      height: 200px;
+    }
     .page-name {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    margin-left: 30px;
+    margin-left: 10px;
     margin-right: auto;
     display: flex;
     align-items: center;
@@ -45,7 +51,7 @@
 
     nav a {
     color: #333;
-    margin-right: 20px;
+    margin-right: 10px;
     text-decoration: none;
     padding: 10px 20px;
     transition: background-color 0.3s ease;
@@ -54,7 +60,7 @@
     }
 
     nav a:hover {
-    background-color: #9ed8f1;
+    background-color: #cce4ee;
     color: #fff; /* 호버 시 텍스트 색상 변경 */
 
 
@@ -65,7 +71,7 @@
   
   <div class="container">
     <div class="navbar-container">
-      <img src="/images/logo.svg" alt="Flowbite Logo" />
+      <img src="/images/logo2.jpg" alt="Flowbite Logo" />
       <div class="page-name">Apply Ease</div>
       <nav>
         <a href="#/">Home</a>
@@ -73,10 +79,9 @@
         <a href="#/CoverLetter">CoverLetter</a>
       </nav>
     </div>
- 
-    <div>
-        <img src="/images/space.gif" alt="Your GIF" />
-      </div>
+    <div class="content">
+        <img src="/images/banner.gif" alt="Your GIF" />
+    </div>
       
   </div>
   

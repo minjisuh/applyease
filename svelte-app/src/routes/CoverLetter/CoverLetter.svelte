@@ -29,7 +29,7 @@
 
 <div class='container'>
     <header class="page-header">
-        <h1>📃마스터 자기소개서</h1>
+        <h1>📃 마스터 자기소개서</h1>
         <button on:click={saveAnswers}>📂 파일로 저장</button> 
     </header>
     <div class="qna">
@@ -60,13 +60,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top : 70px;
         margin-bottom: 100px;
         border-bottom : 0.5px solid gray;
     }
   
+      
     h1 {
-      margin: 0;
+      margin-bottom : 5px;
+      font-size: 25px;
     }
   
     .page-header button {

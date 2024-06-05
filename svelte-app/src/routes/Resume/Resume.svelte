@@ -251,13 +251,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top : 70px;
         margin-bottom: 100px;
         border-bottom : 0.5px solid gray;
     }
   
+      
     h1 {
-      margin: 0;
+      margin-bottom : 5px;
+      font-size: 25px;
     }
   
     .page-header button {
