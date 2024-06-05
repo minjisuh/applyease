@@ -122,6 +122,7 @@
         <div class="header">
           <h2>📢 간단 소개</h2>
         </div>
+        <textarea bind:value={userInfo.intro} class="inputField" class:noBorder={!isEditing} disabled={!isEditing}></textarea>
     </div>
       
 
