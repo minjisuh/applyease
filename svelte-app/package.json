@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@dhx/trial-eventcalendar": "^2.2.1",
+    "axios": "^1.7.2",
     "dhtmlx-scheduler": "^7.0.5",
     "flowbite": "^2.3.0",
     "flowbite-svelte": "^0.46.1",

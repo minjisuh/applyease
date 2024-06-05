@@ -1,5 +1,5 @@
 <script>
-  import Calendar from './Calendar.svelte';
+  import Calendar from "./Calendar.svelte";
   import { getData } from "./data.js";
 </script>
 

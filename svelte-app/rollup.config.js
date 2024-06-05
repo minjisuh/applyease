@@ -39,8 +39,10 @@ export default {
 		globals: {
 			'svelte-routing': 'svelteRouting',
 			'flowbite-svelte': 'flowbiteSvelte',
+			axios: 'axios',
 		},
 	},
+	external: ['axios'],
 	plugins: [
 		svelte({
 			compilerOptions: {
@@ -77,5 +79,14 @@ export default {
 	],
 	watch: {
 		clearScreen: false
-	}
+	},
+	serve: {
+		proxy: {
+		  '/api': {
+			target: 'http://10.125.208.188:38849/',
+			changeOrigin: true,
+			rewrite: (path) => path.replace(/^\/api/, ''),
+		  },
+		},
+	  },
 };
