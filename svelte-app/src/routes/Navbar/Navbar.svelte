@@ -6,7 +6,7 @@
     justify-content: center;
     margin: 0 auto;
     padding: 10px;
-    max-width: 800px;
+    max-width: 1200px;
     }
 
     .navbar-container {
@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     padding: 10px 0;
     background-color: #ffffff;
     border-radius: 5px;
@@ -28,8 +28,8 @@
     .container .content img {
       margin-top : 10px;
       margin-bottom : 10px;
-      width: 800px;
-      height: 200px;
+      width: 1200px;
+      height: 250px;
     }
     .page-name {
     font-size: 24px;
@@ -51,6 +51,7 @@
 
     nav a {
     color: #333;
+    border-radius: 20px;
     margin-right: 10px;
     text-decoration: none;
     padding: 10px 20px;
@@ -60,7 +61,8 @@
     }
 
     nav a:hover {
-    background-color: #cce4ee;
+    border-radius: 20px;
+    background-color: #286a86;
     color: #fff; /* 호버 시 텍스트 색상 변경 */
 
 

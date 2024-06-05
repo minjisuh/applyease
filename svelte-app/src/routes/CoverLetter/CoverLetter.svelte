@@ -52,7 +52,7 @@
       justify-content: center;
       margin: 0 auto;
       padding: 20px;
-      max-width: 800px; /* 최대 너비를 설정하여 양 옆에 공간을 만듭니다 */
+      max-width: 1200px; /* 최대 너비를 설정하여 양 옆에 공간을 만듭니다 */
     }
   
     .page-header {
