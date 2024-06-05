@@ -8,6 +8,7 @@
         <h1>📆 채용 일정</h1>
     </header>
     <Calendar events={getData()} date={new Date(2021, 5, 10)} />
+    
 </div>
 
 <style>

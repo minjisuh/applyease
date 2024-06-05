@@ -33,9 +33,10 @@ export default {
 	input: 'src/main.js',
 	output: {
 		sourcemap: true,
-		format: 'iife',
+		format: 'es',
 		name: 'app',
-		file: 'public/build/bundle.js',
+		dir: 'public/build',
+		inlineDynamicImports: true, // 동적 import를 인라인으로 처리
 		globals: {
 			'svelte-routing': 'svelteRouting',
 			'flowbite-svelte': 'flowbiteSvelte',

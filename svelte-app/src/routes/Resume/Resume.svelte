@@ -1,4 +1,23 @@
 <script>
+    function openPreview() {
+        const previewWindow = window.open('', 'ResumePreview', 'width=800,height=600');
+        if (previewWindow) {
+            import('./PreviewWindow.svelte').then((module) => {
+            const { default: PreviewWindow } = module;
+            new PreviewWindow({
+                target: previewWindow.document.body,
+                props: {
+                name: userInfo.name,
+                phone: userInfo.phone,
+                email: userInfo.email,
+                intro: userInfo.intro, // 이 부분이 제대로 전달되고 있는지 확인
+                },
+            });
+            });
+        }
+        }
+
+
     // 파일로 저장하는 함수
     function saveFile() {
       const data = '이력서 내용...';
@@ -16,7 +35,8 @@
     let userInfo = { // 사용자 기본 정보
         name: '서민지',
         phone: '010-1234-5678',
-        email: 'example@example.com'
+        email: 'example@example.com',
+        intro : '안녕하세요'
     };
 
     // '수정' 버튼 클릭 이벤트 핸들러
@@ -35,8 +55,6 @@
         career.isEditable = false;
         careers = [...careers.slice(0, index), career, ...careers.slice(index + 1)];
     }
-
-
     let educationHistory = [
     ];
 
@@ -75,6 +93,7 @@
 <div class="container">
     <header class="page-header">
       <h1>📜 이력서</h1> 
+      <button on:click={openPreview}>미리보기</button>
       <button on:click={saveFile}>📂 파일로 저장</button> 
     </header>
 
@@ -83,7 +102,7 @@
     <div class = 'basicinfo'>
         <button on:click={toggleEdit}>{isEditing ? '📥 저장' : '🔧 수정'}</button>
         <div class='header'>
-            <h2>🪪 기본 정보</h2>
+            <h2>😊 기본 정보</h2>
         </div>
         <div>
             <label>이름:</label>
@@ -99,14 +118,12 @@
         </div>
     </div>
       
-    <div class = 'intro'>
-        <div class='header'>
-            <h2>📢 간단 소개</h2>
-        </div>
-        <div>
-            <textarea class="inputField" class:noBorder={!isEditing} disabled={!isEditing} />
+    <div class="intro">
+        <div class="header">
+          <h2>📢 간단 소개</h2>
         </div>
     </div>
+      
 
     <div class='careers'>
         <div class = 'carrerheader'>
@@ -232,8 +249,6 @@
     </div>
 
 </div>
-
-  
   
   <style>
     .container {
