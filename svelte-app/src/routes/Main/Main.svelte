@@ -1,6 +1,6 @@
 <script>
   import Calendar from "./Calendar.svelte";
-  import { getData } from "./data.js";
+  import { getData } from "../../../../../applyease2/frontend/src/routes/Home/data.js";
 </script>
 
 <div class = 'container'>
