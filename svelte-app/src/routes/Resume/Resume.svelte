@@ -1,7 +1,8 @@
 <script>
+    import { navigate } from 'svelte-routing';
     function openPreview() {
-        
-        }
+        navigate('/preview', { state: { userInfo } });
+    }
 
 
     // 파일로 저장하는 함수
