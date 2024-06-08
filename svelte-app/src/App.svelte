@@ -4,6 +4,7 @@
 	import Main from './routes/Main/Main.svelte'
 	import Resume from './routes/Resume/Resume.svelte'
 	import CoverLetter from './routes/CoverLetter/CoverLetter.svelte'
+	import PreviewWindow from './routes/Resume/PreviewWindow.svelte'
   
 	const routes = {
 	  '/': Main,

@@ -1,20 +1,6 @@
 <script>
     function openPreview() {
-        const previewWindow = window.open('', 'ResumePreview', 'width=800,height=600');
-        if (previewWindow) {
-            import('./PreviewWindow.svelte').then((module) => {
-            const { default: PreviewWindow } = module;
-            new PreviewWindow({
-                target: previewWindow.document.body,
-                props: {
-                name: userInfo.name,
-                phone: userInfo.phone,
-                email: userInfo.email,
-                intro2: userInfo.intro2, // 이 부분이 제대로 전달되고 있는지 확인
-                },
-            });
-            });
-        }
+        
         }
 
 
@@ -105,15 +91,15 @@
             <h2>😊 기본 정보</h2>
         </div>
         <div>
-            <label>이름:</label>
+
             <input type="text" bind:value={userInfo.name} class="inputField" class:noBorder={!isEditing} disabled={!isEditing} />
         </div>
         <div>
-            <label>전화번호:</label>
+
             <input type="text" bind:value={userInfo.phone} class="inputField" class:noBorder={!isEditing} disabled={!isEditing} />
         </div>
         <div>
-            <label>이메일:</label>
+
             <input type="email" bind:value={userInfo.email} class="inputField" class:noBorder={!isEditing} disabled={!isEditing} />
         </div>
     </div>
@@ -123,8 +109,7 @@
           <h2>📢 간단 소개</h2>
         </div>
         <div>
-            <label>간단소개 :</label>
-            <input type="text" bind:value={userInfo.intro2} class="inputField" class:noBorder={!isEditing} disabled={!isEditing} /> 
+            
         </div>
     </div>
       
@@ -138,7 +123,7 @@
         <div class="career-input">
             {#if career.isEditable}
                 <div class = "starttime">
-                    <label>시작 년도:</label>
+                    
                     <select bind:value={career.startYear}>
                         <option value="">년도</option>
                         <option>2024</option>
@@ -146,7 +131,7 @@
                         <option>2022</option>
                         <option>2021</option>
                     </select>
-                    <label>시작 월:</label>
+ 
                     <select bind:value={career.startMonth}>
                         <option value="">월</option>
                         <option>1</option>
@@ -164,7 +149,7 @@
                     </select>
                 </div>
                 <div class = "endtime">
-                    <label>끝 년도:</label>
+
                     <select bind:value={career.endYear}>
                         <option value="">년도</option>
                         <!-- 년도 옵션, 실제로는 동적으로 생성될 수 있습니다 -->
@@ -174,7 +159,7 @@
                         <option>2021</option>
                         <!-- 여기에 더 많은 년도 추가 -->
                     </select>
-                    <label>끝 월:</label>
+
                     <select bind:value={career.endMonth}>
                         <option value="">월</option>
                         <!-- 월 옵션 -->
@@ -317,12 +302,7 @@
         cursor: pointer;
     }
 
-    .basicinfo label {
-        color : rgb(66, 66, 66);
-        font-size: 16px;
-        font-weight: bold;
-        margin-right: 10px;
-    }
+    
     .inputField {
         border: 1px solid #ccc; /* 기본 테두리 */
         padding: 5px;
@@ -342,11 +322,7 @@
         align-items: center;
         margin-bottom: 20px;
     }
-    .intro textarea {
-        width: 100%;
-        height: 200px;
-        border: 1px solid #ccc; /* 기본 테두리 */
-    }
+    
 
     .careers {
         width: 100%;
