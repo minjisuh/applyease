@@ -10,7 +10,7 @@
                 name: userInfo.name,
                 phone: userInfo.phone,
                 email: userInfo.email,
-                intro: userInfo.intro, // 이 부분이 제대로 전달되고 있는지 확인
+                intro2: userInfo.intro2, // 이 부분이 제대로 전달되고 있는지 확인
                 },
             });
             });
@@ -36,7 +36,7 @@
         name: '서민지',
         phone: '010-1234-5678',
         email: 'example@example.com',
-        intro : '안녕하세요'
+        intro2 : '안녕하세요'
     };
 
     // '수정' 버튼 클릭 이벤트 핸들러
@@ -122,7 +122,10 @@
         <div class="header">
           <h2>📢 간단 소개</h2>
         </div>
-        <textarea bind:value={userInfo.intro} class="inputField" class:noBorder={!isEditing} disabled={!isEditing}></textarea>
+        <div>
+            <label>간단소개 :</label>
+            <input type="text" bind:value={userInfo.intro2} class="inputField" class:noBorder={!isEditing} disabled={!isEditing} /> 
+        </div>
     </div>
       
 
